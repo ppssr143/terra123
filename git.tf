@@ -4,12 +4,9 @@ provider "aws"{
         secret_key = "2IFHsIw2tAdHdaSNzAhm8RbVZOZ2j6ZQXjPzlVsE"
 }
 resource "aws_instance" "web" {
- # ami           = "ami-08e6b682a466887dd"
-  ami           = "ami-00399ec92321828f5"
+   ami           = "ami-00399ec92321828f5"
   instance_type = "t2.micro"
-  #instance_type = "t2.micro"
-  #key_name      = "terraform"
-  key_name      = "terraform"
+   key_name      = "terraform"
   user_data     = <<-EOF
                 #!/bin/bash
                 sudo apt-get update -y
