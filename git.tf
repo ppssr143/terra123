@@ -24,4 +24,8 @@ resource "aws_instance" "web" {
     Name = "HelloWorld"
   }
 }
+output "ipddress" {
+  value = aws_instance.web.public_ip
+}
+
 
